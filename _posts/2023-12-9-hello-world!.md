@@ -23,6 +23,7 @@ To install Jekyll I took the following steps.
 - Copied the [template](https://github.com/cotes2020/chirpy-starter) repository to my own GitHub account.
 - Cloned the repository to vscode on my local machine to make modications.
 - Used winget to install Ruby (with devkit) on Windows.
+
 ```powershell
 winget search rubyinstaller
 Name                Id                                   Version  Source
