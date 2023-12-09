@@ -66,4 +66,4 @@ Configuration file: C:/Users/Hein/blog/heinvr.github.io/_config.yml
 - I just needed a few modifications to the _config.yml to personalize the blog a bit more and I was ready to start writing.
 
 ## Setting up Github pages
-After writing this initial post i wanted to publish the blog online, this was way easier than expected. All it took was a commit to main and [we were live!](https://heinvr.github.io/)
+After writing this initial post i wanted to publish the blog online, this was way easier than expected. All it took was a commit to main and [we are live!](https://heinvr.github.io/)
