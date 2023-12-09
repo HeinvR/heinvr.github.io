@@ -15,7 +15,7 @@ The question is, what is the easiest way to accomplish this? I'm not really into
 - To keep my heartrate down and keep my environment happy, it would be wise to avoid frontend coding as much as possible.
 - I would like it to be low maintenance and secure.
 
-After searching a while I came across [Jekyll](https://jekyllrb.com/) and this was exactly what I needed. Just a static website with no updates to install. And with GitHub pages I can host it for free! I also found a suitable [theme](https://github.com/cotes2020/chirpy-starter) to get me started and decided to give this one a go.
+After searching a while I came across [Jekyll](https://jekyllrb.com/) and this was exactly what I needed. Just a static website with no updates to install. And by using [GitHub Pages](https://pages.github.com/) I can host it for free! I also found a suitable [theme](https://github.com/cotes2020/chirpy-starter) to get me started and decided to give this one a go.
 
 ## Setup Jekyll on Windows
 To install Jekyll I took the following steps.
@@ -24,7 +24,7 @@ To install Jekyll I took the following steps.
 - Cloned the repository to vscode on my local machine to make modications.
 - Used winget to install Ruby (with devkit) on Windows.
 ```powershell
-PS C:\Users\Hein> winget search rubyinstaller
+winget search rubyinstaller
 Name                Id                                   Version  Source
 -------------------------------------------------------------------------
 Ruby 3.2 with MSYS2 RubyInstallerTeam.RubyWithDevKit.3.2 3.2.2-1  winget
@@ -65,5 +65,5 @@ Configuration file: C:/Users/Hein/blog/heinvr.github.io/_config.yml
 ```
 - I just needed a few modifications to the _config.yml to personalize the blog a bit more and I was ready to start writing.
 
-## Setting up Github pages
-After writing this initial post i wanted to publish the blog online, this was way easier than expected. All it took was a commit to main and [we are live!](https://heinvr.github.io/)
+## Github pages
+After writing this initial post i wanted to publish the blog online, this was way easier than expected. Github pages was allready setup for me. All it took was a commit to main and [we are live!](https://heinvr.github.io/)
