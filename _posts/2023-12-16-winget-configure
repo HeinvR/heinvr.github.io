@@ -1,0 +1,109 @@
+---
+categories: [winget]
+tags: [winget, devenv]
+title: Using winget configure to setup dev environment
+---
+
+From time to time i want to setup my
+
+## What is WinGet?
+The WinGet command line tool enables users to discover, install, upgrade, remove and configure applications on Windows 10 and Windows 11 computers.
+
+WinGet has been around for some time but the WinGet configure option has only recently been introduced. WinGet configure can be used to automatically handle the setup and configuration requirements for an ideal development environment on your Windows machine. 
+
+Applying a WinGet configuration file helps with installing and managing software packages, applications, programming languages, frameworks, tools, or settings necessary for a project. 
+
+Time to check this one out!
+
+## Checking prerequisites
+To run the WinGet configure command you need Windows 10 RS5 or Windows 11, and WinGet version 1.6.2631 or later.
+
+Run the following Powershell command to check your current WinGet version:
+
+```powershell
+>winget -v
+v1.6.3133
+```
+
+## Structure your YAML file
+We need to setup our YAML file
+
+In this example file i structure my file to install the following software:
+
+- Azure CLI
+- Powershell 7
+- Visual Studio Code
+- Visual Studio Code - Bicep Extension
+- Visual Studio Code - PowerShell Extension
+- Visual Studio Code - Azure Account Extension
+- Visual Studio Code - Python extenson
+- Git
+
+```yaml
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify min OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        module: Microsoft.WinGet.DSC
+        description: 'Install Microsoft Visual Studio Code'
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+    - resource: AnyPackageDSC/Package
+      directives:
+        allowPrerelease: true
+        description: 'Install Powershell module'
+      settings:
+        Name: az
+        Provider: PSGallery
+    - resource: Microsoft.WinGet.DSC/WingetPackage
+      directives:
+        module: Microsoft.WinGet.DSC
+        description: 'Install Git'
+        allowPrerelease: true
+      settings:
+        id: Git.Git
+        source: winget
+    - resource: vscode/VSCodeExtension
+      directives:
+        description: Install VSCode Bicep Extension
+        allowPrerelease: true
+      settings:
+        Name: ms-azuretools.vscode-bicep
+        Ensure: Present
+    - resource: vscode/VSCodeExtension
+      directives:
+        description: Install VSCode PowerShell Extension
+        allowPrerelease: true
+      settings:
+        Name: ms-vscode.PowerShell
+        Ensure: Present
+    - resource: vscode/VSCodeExtension
+      directives:
+        description: Install VSCode Azure Account Extension
+        allowPrerelease: true
+      settings:
+        Name: ms-vscode.azure-account
+        Ensure: Present
+  configurationVersion: 0.2.0
+```
+
+## Running winget configure
+Now we just need a single command to setup our environment:
+
+```powershell
+winget configure configuration.dsc.yaml
+```
+
+## references
+winget docs
+github repo

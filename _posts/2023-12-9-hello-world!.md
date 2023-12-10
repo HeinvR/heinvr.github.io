@@ -46,14 +46,14 @@ winget install RubyInstallerTeam.RubyWithDevKit.3.2
 - Ran the bundle command to install Ruby dependencies.
 
 ```ruby
-PS C:\Users\Hein\blog\heinvr.github.io> bundle
+bundle
 
 Bundle complete! 6 Gemfile dependencies, 49 gems now installed.
 ```
 - Started the local webserver to check things out locally.
 
 ```ruby
-PS C:\Users\Hein\blog\heinvr.github.io> bundle exec jekyll s
+bundle exec jekyll s
 Configuration file: C:/Users/Hein/blog/heinvr.github.io/_config.yml
             Source: C:/Users/Hein/blog/heinvr.github.io
        Destination: C:/Users/Hein/blog/heinvr.github.io/_site
