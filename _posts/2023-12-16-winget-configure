@@ -58,12 +58,6 @@ properties:
       settings:
         id: Microsoft.VisualStudioCode
         source: winget
-    - resource: PSModulesDsc/PowershellModule
-      directives:
-        allowPrerelease: true
-        description: 'Install Powershell module'
-      settings:
-        Module_Name: az
     - resource: Microsoft.WinGet.DSC/WingetPackage
       directives:
         module: Microsoft.WinGet.DSC
