@@ -66,28 +66,33 @@ properties:
       settings:
         id: Git.Git
         source: winget
-    - resource: vscode/VSCodeExtension
+    - resource: Microsoft.WinGet.DSC/WingetPackage
       directives:
-        description: Install VSCode Bicep Extension
+        module: Microsoft.WinGet.DSC
+        description: 'Install Powershell 7*'
         allowPrerelease: true
       settings:
-        Name: ms-azuretools.vscode-bicep
-        Ensure: Present
-    - resource: vscode/VSCodeExtension
+        id: Microsoft.Powershell
+        source: winget
+    - resource: PSDscResources/Script
+      id: Install VScode Extensions
       directives:
-        description: Install VSCode PowerShell Extension
+        description: Script to install Powershell extensions
         allowPrerelease: true
       settings:
-        Name: ms-vscode.PowerShell
-        Ensure: Present
-    - resource: vscode/VSCodeExtension
-      directives:
-        description: Install VSCode Azure Account Extension
-        allowPrerelease: true
-      settings:
-        Name: ms-vscode.azure-account
-        Ensure: Present
-  configurationVersion: 0.2.0
+        GetScript: |
+          # Not using this at the moment.
+        TestScript: |
+          return $false
+        SetScript: |
+          # Setting env to ignore extension deprecation warnings
+          $env:NODE_OPTIONS="--no-deprecation"
+          # Extensions to install
+          code --install-extension ms-vscode.azure-account
+          code --install-extension ms-vscode.PowerShell
+          code --install-extension ms-azuretools.vscode-bicep
+          code --install-extension ms-python.python
+  configurationVersion: 0.2.0 
 ```
 
 ## Running winget configure
