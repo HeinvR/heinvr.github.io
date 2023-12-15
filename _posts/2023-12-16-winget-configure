@@ -85,7 +85,7 @@ properties:
         TestScript: |
           return $false
         SetScript: |
-          # Setting env to ignore extension deprecation warnings
+          # Ignore deprecation warnings & reload path
           $env:NODE_OPTIONS="--no-deprecation"
           $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
           # Extensions to install
