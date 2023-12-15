@@ -87,6 +87,7 @@ properties:
         SetScript: |
           # Setting env to ignore extension deprecation warnings
           $env:NODE_OPTIONS="--no-deprecation"
+          $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
           # Extensions to install
           code --install-extension ms-vscode.azure-account
           code --install-extension ms-vscode.PowerShell
