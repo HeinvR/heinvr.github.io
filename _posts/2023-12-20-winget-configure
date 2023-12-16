@@ -4,7 +4,8 @@ tags: [winget, devenv]
 title: Using winget configure to setup dev environment
 ---
 
-From time to time i want to setup my
+After working alot of different projects, my Win11 dev environment eventually gets a mess. 
+
 
 ## What is WinGet?
 The WinGet command line tool enables users to discover, install, upgrade, remove and configure applications on Windows 10 and Windows 11 computers.
