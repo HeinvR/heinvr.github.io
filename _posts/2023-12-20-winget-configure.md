@@ -31,14 +31,14 @@ If your version of Winget is too low, refer to the [documentation](https://learn
 ## Winget configuration file
 When running Winget configure, you need to specify a configuration file. This file needs to written in YAML-formatting. The convention for naming a WinGet Configuration file is "configuration.dsc.yaml"
 
-### configuration file components
+### Configuration file components
 The configuration file consists of multiple components which need (or should) be present in the file.
 
 #### Schema 
 
 Schema: The first line in your configuration file should contain the following comment:
 
-```
+```YAML
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/<most recent schema version #>
 ```
 
