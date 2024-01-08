@@ -25,6 +25,7 @@ Get-PoshThemes
 
 ## Selecting themes
 To try out a theme, the following commmand can be used. Notice that i used the "Tokyo" theme for this example.
+
 ```powershell
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyo.omp.json" | Invoke-Expression
 ```
@@ -37,6 +38,7 @@ After running the command above, my shell looks like this:
 When you found a theme which you want to setup as default, edit your PowerShell profile.
 
 First open your PowerShell profile in notepad:
+
 ```powershell
 notepad $profile
 ```
