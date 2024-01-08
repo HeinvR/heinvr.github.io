@@ -31,7 +31,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyo.omp.json" | Invoke-Ex
 
 After running the command above, my shell looks like this:
 
-![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/TokyoThemeNoFont.png)
+![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/TokyoThemeNoFont.png?raw=true)
 
 ## Setting a default theme
 When you found a theme which you want to setup as default, edit your PowerShell profile.
@@ -51,22 +51,22 @@ Now, your selected theme is being loaded when your shell is being started.
 # Nerd Fonts
 Perhaps you noticed there are some unrecognizable icons in the example theme we set previously. This is because the default installed fonts don't recognize the icons. 
 
-![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/TokyoThemeErrorFont.png)
+![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/TokyoThemeErrorFont.png?raw=true)
 
-To fix this we need to install a custom font. I used one of the Nerd Fonts to fix this issue. These fonts are available on [Github](https://github.com/ryanoasis/nerd-fonts). Just pick a font you like and download the font from the [release page]https://github.com/ryanoasis/nerd-fonts/releases(). After downloading, extract the archive and install the font.
+To fix this we need to install a custom font. I used one of the Nerd Fonts to fix this issue. These fonts are available on [Github](https://github.com/ryanoasis/nerd-fonts). Just pick a font you like and download the font from the [release page](https://github.com/ryanoasis/nerd-fonts/releases). After downloading, extract the archive and install the font.
 
 ## Setting the font in Windows Terminal
 
 To set the installed font in Windows terminal go to Settings -> PowerShell -> appearance. Edit the "Font face" property by selecting your installed font. In this example i used the "FiraCode Nerd Font".
 
-![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/WindowsTerminalFont.png)
+![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/WindowsTerminalFont.png?raw=true)
 
 ## Setting the font in VScode
 
 To set the font in VSCode go to File -> Preferences -> Settings. In the Text Editor section you can specify your font.
 
-![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/VScodefont.png)
+![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/VScodefont.png?raw=true)
 
 After setting your prompt, the icons in the the should be recognized and your prompt should look like this:
 
-![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/TokyoThemeFont.png)
+![](https://github.com/HeinvR/heinvr.github.io/blob/main/_posts/img/TokyoThemeFont.png?raw=true)
